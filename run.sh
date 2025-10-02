@@ -6,4 +6,5 @@ docker run -it \
     -v ./.config:/root/.config/ \
     -v ~/.gitconfig:/root/.gitconfig:ro \
     -v ~/.ssh:/root/.ssh:ro \
+    -v $REPOS_DIR:/root/code \
     mle/dbox:latest
