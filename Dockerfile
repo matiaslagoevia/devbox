@@ -24,3 +24,9 @@ RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim \
   ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 RUN rm -rf /var/lib/apt/lists*
+
+COPY boxinit.sh /usr/local/bin/boxinit.sh
+RUN chmod +x /usr/local/bin/boxinit.sh
+
+ENTRYPOINT ["/usr/local/bin/boxinit.sh"]
+CMD ["/bin/bash"]
