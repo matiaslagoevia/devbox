@@ -11,11 +11,18 @@ ENV LC_CTYPE=en_US.UTF-8
 RUN apt-get update && apt-get install -y \
     build-essential \
     tzdata \
-    neovim \
     tmux \
     zsh \
     git \
-    curl 
+    curl \
+    tar
+
+# Get a newer nvim
+RUN curl -LO https://github.com/neovim/neovim/releases/download/v0.11.4/nvim-linux-arm64.tar.gz \
+    && tar xzf nvim-linux-arm64.tar.gz \
+    && mv nvim-linux-arm64 /opt/nvim \
+    && ln -s /opt/nvim/bin/nvim /usr/local/bin/nvim \
+    && rm nvim-linux-arm64.tar.gz
 
 RUN apt-get install -y \
     silversearcher-ag
