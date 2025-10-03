@@ -12,15 +12,18 @@ return require('packer').startup(function(use)
 	}
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
-    -- Rose pine theme
+    -- Monokai theme
     use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
+        'tanvirtin/monokai.nvim',
         config = function()
-            require("rose-pine").setup()
-            vim.cmd('colorscheme rose-pine')
+            require('monokai').setup {
+                palette = require('monokai').pro, -- options: default | pro | soda | risti
+                custom_hlgroups = {},             -- optional overrides
+            }
+            vim.cmd('colorscheme monokai')
         end
     })
+
 
     -- Nvim tree (file explorer)
     use {
