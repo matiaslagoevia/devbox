@@ -34,4 +34,8 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use('junegunn/gv.vim')
 
+    -- Tree sitter
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/playground')
+
 end)
