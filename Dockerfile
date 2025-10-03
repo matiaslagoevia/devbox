@@ -20,6 +20,9 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get install -y \
     silversearcher-ag
 
+RUN apt-get install -y python3-venv \
+    python3-pip
+
 RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim \
   ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
