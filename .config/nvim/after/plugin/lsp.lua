@@ -13,6 +13,13 @@ vim.lsp.config['lua-language-server'] = {
 }
 vim.lsp.enable('lua-language-server')
 
+-- ===== python =====
+vim.lsp.config['ruff'] = {
+    cmd = { 'ruff', 'server' },
+    filetypes = { 'python' },
+}
+vim.lsp.enable('ruff')
+
 -- diagnostics
 vim.diagnostic.config({
     virtual_lines = {
