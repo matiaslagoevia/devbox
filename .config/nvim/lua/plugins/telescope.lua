@@ -1,5 +1,3 @@
-local builtin = require('telescope.builtin')
-
 vim.keymap.set('n', '<leader>fg', function()
     local include_expr = vim.fn.input("Include (fuzzy): ")
     local exclude_expr = vim.fn.input("Exclude (non-fuzzy): ")
@@ -9,7 +7,7 @@ vim.keymap.set('n', '<leader>fg', function()
     table.insert(args, "--ignore")
     table.insert(args, ".git/" .. exclude_expr)
 
-    builtin.live_grep({
+    require('telescope.builtin').live_grep({
         layout_strategy = vim.api.nvim_get_option("columns") < 120 and "vertical" or "horizontal",
         additional_args = function()
             return args
@@ -32,7 +30,7 @@ vim.keymap.set('n', '<leader>ff', function()
             "--ignore", ".git/" .. exclude_expr
         }
 
-    builtin.find_files({
+    require('telescope.builtin').find_files({
         find_command = cmd,
         layout_strategy = vim.api.nvim_get_option("columns") < 120 and "vertical" or "horizontal",
     })
