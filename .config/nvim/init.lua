@@ -1,3 +1,3 @@
-require('plugins')
-require('remaps')
-require('set')
+require('config.options')
+require('config.keybinds')
+require('config.lazy')

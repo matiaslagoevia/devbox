@@ -1,5 +1,6 @@
 -- Use space as the leader key
 vim.g.mapleader = ' '
+vim.g.maplocalleader = '\\'
 
 function map(mode, lhs, rhs, opts)
     local options = { noremap = true }
@@ -10,7 +11,7 @@ function map(mode, lhs, rhs, opts)
 end
 
 -- Pane movement
-map("n", "<Leader>l", "<C-W><C-L>", { silent = true })
-map("n", "<Leader>h", "<C-W><C-H>", { silent = true })
-map("n", "<Leader>k", "<C-W><C-K>", { silent = true })
-map("n", "<Leader>j", "<C-W><C-J>", { silent = true })
+map("n", "<leader>l", "<C-W><C-L>", { silent = true })
+map("n", "<leader>h", "<C-W><C-H>", { silent = true })
+map("n", "<leader>k", "<C-W><C-K>", { silent = true })
+map("n", "<leader>j", "<C-W><C-J>", { silent = true })
