@@ -13,3 +13,7 @@ vim.opt.wrap = false
 
 -- Prettier windows
 vim.o.winborder = 'rounded'
+
+-- Disable netrw so that it doesn't interfere with nvim-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
