@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -y \
     zsh \
     git \
     curl \
-    tar
+    tar \
+    tree
 
 # Get a newer nvim
 RUN curl -LO https://github.com/neovim/neovim/releases/download/v0.11.4/nvim-linux-arm64.tar.gz \
