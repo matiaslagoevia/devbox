@@ -1,4 +1,3 @@
-
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>fg', function()
@@ -28,7 +27,7 @@ vim.keymap.set('n', '<leader>ff', function()
             "--nocolor",
             "--silent",
             "--follow",
-            "--hidden", 
+            "--hidden",
             "-g", "" .. include_expr,
             "--ignore", ".git/" .. exclude_expr
         }
