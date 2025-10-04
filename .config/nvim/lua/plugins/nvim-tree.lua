@@ -1,5 +1,6 @@
 map('n', '<Leader>t', ':NvimTreeToggle<CR>', { silent = true })
 
+
 return {
     "nvim-tree/nvim-tree.lua",
     dependencies = {
@@ -20,5 +21,9 @@ return {
                 },
             },
         })
+        -- Improve highlighting
+        vim.api.nvim_set_hl(0, "NvimTreeRootFolder", { fg = "#89b4fa", bold = true })
+        vim.api.nvim_set_hl(0, "NvimTreeOpenedFolderName", { fg = "#f9e2af", bold = true })
+        vim.api.nvim_set_hl(0, "NvimTreeExecFile", { link = "NvimTreeFile" })
     end,
 }

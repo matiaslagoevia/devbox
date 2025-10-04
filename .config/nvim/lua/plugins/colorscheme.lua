@@ -1,13 +1,14 @@
 return {
     {
-        "tanvirtin/monokai.nvim",
+        "loctvl842/monokai-pro.nvim",
         lazy = false,
         config = function()
-            require("monokai").setup({
-                palette = require("monokai").classic,
-                italics = true,
+            require("monokai-pro").setup({
+                terminal_colors = true,
+                devicons = true,
+                flavor = "ristretto",
             })
-            vim.cmd.colorscheme("monokai")
+            vim.cmd.colorscheme("monokai-pro")
         end,
     },
 }
