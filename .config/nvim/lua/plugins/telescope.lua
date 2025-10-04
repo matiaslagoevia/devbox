@@ -53,11 +53,6 @@ return {
                     prompt_prefix = "❯ ",
                     selection_caret = "❯ ",
                     mappings = {
-                        i = {
-                            ["<C-j>"] = "move_selection_next",
-                            ["<C-k>"] = "move_selection_previous",
-                            ["<C-q>"] = "close",
-                        },
                         n = {
                             ["q"] = "close",
                         },
