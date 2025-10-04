@@ -6,6 +6,7 @@ return {
             "hrsh7th/cmp-nvim-lsp",   -- LSP source
             "hrsh7th/cmp-buffer",     -- buffer words
             "hrsh7th/cmp-path",       -- filesystem paths
+            "hrsh7th/cmp-cmdline",    -- cmdline
         },
         config = function()
             local cmp = require("cmp")
@@ -41,6 +42,7 @@ return {
                             nvim_lsp = "[LSP]",
                             buffer = "[BUF]",
                             path = "[PATH]",
+                            cmdline = "[CMD]",
                         })[entry.source.name]
                         return vim_item
                     end,
