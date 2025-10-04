@@ -19,10 +19,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
-vim.keymap.set('i', '<C-h>', function()
-    vim.lsp.completion.get()
-end)
-
 vim.keymap.set('n', '<C-h>', function()
     vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end)
