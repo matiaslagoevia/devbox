@@ -1,3 +1,5 @@
 #!/bin/sh
 
-docker build -t mle/dbox .
+cp ~/ca-cert/*.crt certs/
+
+docker build --platform linux/arm64 -t mle/dbox .
