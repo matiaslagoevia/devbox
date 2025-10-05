@@ -1,4 +1,4 @@
-map('n', '<Leader>t', ':NvimTreeToggle<CR>', { silent = true })
+MAP('n', '<Leader>t', ':NvimTreeToggle<CR>', { silent = true })
 
 
 return {
