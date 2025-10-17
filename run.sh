@@ -9,4 +9,5 @@ docker run -it \
     -v ~/.gitconfig:/root/.gitconfig:ro \
     -v ~/.ssh:/root/.ssh:ro \
     -v $REPOS_DIR:/root/code \
+    -p 8080:8080 \
     mle/dbox:latest

@@ -16,7 +16,9 @@ RUN apt-get update && apt-get install -y \
     git \
     curl \
     tar \
-    tree
+    tree \
+    zip \
+    unzip
 
 # Workaround: copy will fail if no files matched, so put .gitkeep on folder and just pass that over
 # When certs are present, they will be included and updated; when not, the update will be harmless
